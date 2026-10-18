@@ -1,0 +1,49 @@
+<svg xml:space="preserve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <rect width="900" height="350" rx="16" fill="#ffffff"/>
+  <text x="450" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2328">스킬이 알아서 발동되는 원리</text>
+
+  <rect x="20" y="70" width="190" height="96" rx="12" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
+  <text x="115" y="102" text-anchor="middle" font-size="15" font-weight="700" fill="#0969da">세션 시작</text>
+  <text x="115" y="126" text-anchor="middle" font-size="12" fill="#1f2328">startup · clear · compact</text>
+  <text x="115" y="148" text-anchor="middle" font-size="11" fill="#57606a">요약 후에도 다시 주입</text>
+
+  <rect x="245" y="70" width="190" height="96" rx="12" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+  <text x="340" y="102" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2328">SessionStart 훅</text>
+  <text x="340" y="126" text-anchor="middle" font-size="12" fill="#1f2328">run-hook.cmd</text>
+  <text x="340" y="148" text-anchor="middle" font-size="11" fill="#57606a">Windows·Unix 겸용 polyglot</text>
+
+  <rect x="470" y="70" width="190" height="96" rx="12" fill="#fbefff" stroke="#8250df" stroke-width="2"/>
+  <text x="565" y="102" text-anchor="middle" font-size="15" font-weight="700" fill="#8250df">session-start</text>
+  <text x="565" y="126" text-anchor="middle" font-size="12" fill="#1f2328">using-superpowers 전문을</text>
+  <text x="565" y="148" text-anchor="middle" font-size="12" fill="#1f2328">additionalContext로 주입</text>
+
+  <rect x="695" y="70" width="185" height="96" rx="12" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
+  <text x="787" y="102" text-anchor="middle" font-size="15" font-weight="700" fill="#9a6700">모델 컨텍스트</text>
+  <text x="787" y="126" text-anchor="middle" font-size="12" fill="#1f2328">"1%라도 해당하면</text>
+  <text x="787" y="148" text-anchor="middle" font-size="12" fill="#1f2328">스킬부터 호출"</text>
+
+  <line x1="210" y1="118" x2="243" y2="118" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="435" y1="118" x2="468" y2="118" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="660" y1="118" x2="693" y2="118" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+
+  <path d="M760,166 L640,214" fill="none" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M815,166 L815,214" fill="none" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="470" y="216" width="230" height="60" rx="10" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
+  <text x="585" y="241" text-anchor="middle" font-size="13" font-weight="700" fill="#1a7f37">"X 만들자" → brainstorming</text>
+  <text x="585" y="262" text-anchor="middle" font-size="11.5" fill="#57606a">plan 모드 진입 전에도 먼저</text>
+  <rect x="720" y="216" width="160" height="60" rx="10" fill="#ffebe9" stroke="#cf222e" stroke-width="2"/>
+  <text x="800" y="241" text-anchor="middle" font-size="13" font-weight="700" fill="#cf222e">"버그" →</text>
+  <text x="800" y="262" text-anchor="middle" font-size="11.5" fill="#1f2328">systematic-debugging</text>
+
+  <rect x="20" y="200" width="420" height="110" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="38" y="224" font-size="13" font-weight="700" fill="#1f2328">세 겹의 장치</text>
+  <text x="38" y="248" font-size="12" fill="#57606a">① 훅: 매 세션 using-superpowers를 강제로 주입</text>
+  <text x="38" y="270" font-size="12" fill="#57606a">② Red Flags 표: 스킬을 건너뛰려는 합리화를 미리 반박</text>
+  <text x="38" y="292" font-size="12" fill="#57606a">③ description: "MUST use before any creative work"</text>
+  <text x="450" y="336" text-anchor="middle" font-size="11" fill="#8c959f">우선순위: 사용자 지시(CLAUDE.md) &gt; 스킬 &gt; 기본 동작 · 서브에이전트는 SUBAGENT-STOP으로 제외</text>
+</svg>

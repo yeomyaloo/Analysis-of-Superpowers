@@ -1,0 +1,65 @@
+<svg xml:space="preserve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <rect width="900" height="430" rx="16" fill="#ffffff"/>
+  <text x="450" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2328">Visual Companion — 파일로 주고받는 목업 서버</text>
+
+  <!-- 에이전트 -->
+  <rect x="30" y="120" width="170" height="130" rx="12" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
+  <text x="115" y="160" text-anchor="middle" font-size="17" font-weight="700" fill="#0969da">에이전트</text>
+  <text x="115" y="186" text-anchor="middle" font-size="12" fill="#1f2328">HTML 조각을 쓰고</text>
+  <text x="115" y="206" text-anchor="middle" font-size="12" fill="#1f2328">다음 턴에 events 읽기</text>
+  <text x="115" y="230" text-anchor="middle" font-size="11" fill="#57606a">서버 API 호출 없음</text>
+
+  <!-- content / state -->
+  <rect x="270" y="70" width="190" height="80" rx="10" fill="#f6f8fa" stroke="#57606a"/>
+  <text x="365" y="100" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2328">content/</text>
+  <text x="365" y="122" text-anchor="middle" font-size="11.5" fill="#57606a">layout.html, layout-v2.html…</text>
+  <text x="365" y="139" text-anchor="middle" font-size="11" fill="#57606a">파일명 재사용 금지</text>
+  <rect x="270" y="220" width="190" height="80" rx="10" fill="#f6f8fa" stroke="#57606a"/>
+  <text x="365" y="250" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2328">state/events</text>
+  <text x="365" y="272" text-anchor="middle" font-size="11.5" fill="#57606a">클릭 1건 = JSON 한 줄</text>
+  <text x="365" y="289" text-anchor="middle" font-size="11" fill="#57606a">새 화면이 오면 비움</text>
+
+  <!-- 서버 -->
+  <rect x="530" y="90" width="170" height="190" rx="12" fill="#fbefff" stroke="#8250df" stroke-width="2"/>
+  <text x="615" y="124" text-anchor="middle" font-size="16" font-weight="700" fill="#8250df">server.cjs</text>
+  <text x="615" y="148" text-anchor="middle" font-size="11.5" fill="#1f2328">Node, 의존성 0</text>
+  <text x="615" y="168" text-anchor="middle" font-size="11.5" fill="#1f2328">fs.watch + 100ms 디바운스</text>
+  <text x="615" y="188" text-anchor="middle" font-size="11.5" fill="#1f2328">최신 mtime 파일 서빙</text>
+  <text x="615" y="208" text-anchor="middle" font-size="11.5" fill="#1f2328">frame에 감싸기</text>
+  <text x="615" y="228" text-anchor="middle" font-size="11.5" fill="#1f2328">RFC 6455 직접 구현</text>
+  <text x="615" y="256" text-anchor="middle" font-size="11" fill="#57606a">127.0.0.1 바인드</text>
+
+  <!-- 브라우저 -->
+  <rect x="760" y="120" width="120" height="130" rx="12" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
+  <text x="820" y="160" text-anchor="middle" font-size="16" font-weight="700" fill="#1a7f37">브라우저</text>
+  <text x="820" y="186" text-anchor="middle" font-size="11.5" fill="#1f2328">helper.js</text>
+  <text x="820" y="206" text-anchor="middle" font-size="11.5" fill="#1f2328">data-choice 클릭</text>
+  <text x="820" y="230" text-anchor="middle" font-size="11" fill="#57606a">사용자</text>
+
+  <!-- 화살표 -->
+  <path d="M200,150 L268,115" fill="none" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="208" y="118" font-size="12" font-weight="700" fill="#0969da">① 작성</text>
+  <line x1="460" y1="110" x2="528" y2="130" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="470" y="98" font-size="12" font-weight="700" fill="#8250df">② 감지</text>
+  <line x1="700" y1="150" x2="758" y2="150" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="729" y="140" text-anchor="middle" font-size="11.5" font-weight="700" fill="#8250df">③ reload</text>
+  <line x1="760" y1="220" x2="702" y2="220" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="731" y="238" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1a7f37">④ 클릭</text>
+  <line x1="530" y1="250" x2="462" y2="260" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="470" y="244" font-size="12" font-weight="700" fill="#8250df">⑤ 기록</text>
+  <path d="M270,270 L202,225" fill="none" stroke="#57606a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="196" y="272" font-size="12" font-weight="700" fill="#0969da">⑥ 다음 턴</text>
+
+  <!-- 보안·수명 -->
+  <rect x="30" y="325" width="840" height="85" rx="12" fill="#ffebe9" stroke="#cf222e" stroke-width="1.5"/>
+  <text x="50" y="350" font-size="13.5" font-weight="700" fill="#cf222e">보안</text>
+  <text x="110" y="350" font-size="12" fill="#1f2328">세션 키 ?key= → HttpOnly·SameSite 쿠키 · 상수 시간 비교 · WebSocket Origin 검사 · 클릭재킹 차단 헤더 · 심링크/하드링크 거부</text>
+  <text x="50" y="378" font-size="13.5" font-weight="700" fill="#9a6700">수명</text>
+  <text x="110" y="378" font-size="12" fill="#1f2328">소유자 PID 감시 → 죽으면 종료 · 4시간 유휴 종료 · 같은 포트·키로 재시작(탭 자동 재연결)</text>
+  <text x="110" y="398" font-size="12" fill="#57606a">Windows Git Bash·Codex는 백그라운드 프로세스를 정리하므로 자동 foreground 모드</text>
+</svg>
