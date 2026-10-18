@@ -4,7 +4,7 @@
 "일하는 방식"을 스킬(SKILL.md) 묶음으로 주입하는 플러그인이다. 이 레포는 그 내부를 읽고 **왜 이렇게 설계했는지**를 정리한 분석 노트다.
 
 - 분석 기준: `obra/superpowers` **v7.0.0** (`bb92a77`, 2026-10-09)
-- 첫 번째 주제: **brainstorming 스킬** — v7.0.0에서 처음부터 다시 쓴 스킬
+- 주제: **brainstorming 스킬**(v7.0.0에서 처음부터 다시 쓴 스킬), **스토어 배포 구조**
 
 ## 한눈에 보기 — brainstorming 흐름
 
@@ -43,6 +43,14 @@ v7.0.0은 "40단어 원본 프롬프트"의 정신으로 돌아가 **의도 파�
 **품질 향상은 아직 증명되지 않았다.** 다만 brainstorming 개선 PR에서 의도 파악이 좋아진 신호(Opus 5, 실패 → 통과)는 있다.
 표본이 1~2회라 방향만 참고해야 한다. → 자세히: [06-performance.md](brainstorming/06-performance.md)
 
+## 스토어 배포 구조
+
+![superpowers 배포 구조](images/distribution.svg)
+
+스킬과 훅은 한 벌만 두고, 하네스마다 얇은 매니페스트(`.claude-plugin/`, `.codex-plugin/`, `gemini-extension.json` 등)로 감싼다.
+배포 경로는 세 가지다. **공식 마켓플레이스**(심사, 커밋 sha 고정), **자체 마켓플레이스**(GitHub 레포가 곧 스토어), **레포 URL 직접 설치**.
+내 플러그인을 같은 방식으로 올리는 절차도 정리했다. → 자세히: [distribution/01-marketplace.md](distribution/01-marketplace.md)
+
 ## 목차
 
 | # | 문서 | 내용 |
@@ -53,6 +61,7 @@ v7.0.0은 "40단어 원본 프롬프트"의 정신으로 돌아가 **의도 파�
 | 4 | [brainstorming/04-bootstrap.md](brainstorming/04-bootstrap.md) | 스킬이 "알아서" 발동되는 원리: SessionStart 훅 + using-superpowers |
 | 5 | [brainstorming/05-takeaways.md](brainstorming/05-takeaways.md) | 배울 점과 내 프로젝트에 적용할 점 |
 | 6 | [brainstorming/06-performance.md](brainstorming/06-performance.md) | 쓸 때 vs 안 쓸 때: 공식 평가 기록으로 본 시간·비용·품질 차이 |
+| 배포 | [distribution/01-marketplace.md](distribution/01-marketplace.md) | 스토어(마켓플레이스)에 올리는 구조와 내 플러그인 등록 절차 |
 
 ## 한 줄 요약
 
