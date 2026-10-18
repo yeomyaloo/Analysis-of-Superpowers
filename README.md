@@ -35,6 +35,14 @@ v7.0.0은 "40단어 원본 프롬프트"의 정신으로 돌아가 **의도 파�
 
 세션 시작 훅이 `using-superpowers` 스킬 전문을 매번 컨텍스트에 넣고, "1%라도 해당하면 스킬부터"라는 규칙이 brainstorming을 먼저 부른다. → 자세히: [04-bootstrap.md](brainstorming/04-bootstrap.md)
 
+## 쓸 때 vs 안 쓸 때
+
+![superpowers 사용/미사용 비교](images/performance.svg)
+
+공식 평가 레포(superpowers-evals)의 순정 vs superpowers 실험을 보면, **시간·비용 증가는 분명**하다(코드 리뷰 1건에서 시간 6.3배, 비용 13.9배).
+**품질 향상은 아직 증명되지 않았다.** 다만 brainstorming 개선 PR에서 의도 파악이 좋아진 신호(Opus 5, 실패 → 통과)는 있다.
+표본이 1~2회라 방향만 참고해야 한다. → 자세히: [06-performance.md](brainstorming/06-performance.md)
+
 ## 목차
 
 | # | 문서 | 내용 |
@@ -44,6 +52,7 @@ v7.0.0은 "40단어 원본 프롬프트"의 정신으로 돌아가 **의도 파�
 | 3 | [brainstorming/03-visual-companion.md](brainstorming/03-visual-companion.md) | 브라우저 목업 서버(`server.cjs`) 구조: 의존성 0 WebSocket, 토큰 인증, 수명 관리 |
 | 4 | [brainstorming/04-bootstrap.md](brainstorming/04-bootstrap.md) | 스킬이 "알아서" 발동되는 원리: SessionStart 훅 + using-superpowers |
 | 5 | [brainstorming/05-takeaways.md](brainstorming/05-takeaways.md) | 배울 점과 내 프로젝트에 적용할 점 |
+| 6 | [brainstorming/06-performance.md](brainstorming/06-performance.md) | 쓸 때 vs 안 쓸 때: 공식 평가 기록으로 본 시간·비용·품질 차이 |
 
 ## 한 줄 요약
 
@@ -55,6 +64,7 @@ v7.0.0은 "40단어 원본 프롬프트"의 정신으로 돌아가 **의도 파�
 
 1. `git clone https://github.com/obra/superpowers` 후 `skills/brainstorming/` 전체와 관련 훅·스펙 문서를 읽었다.
 2. `git log -- skills/brainstorming/SKILL.md`로 2025-10 ~ 2026-10 변경 이력 29개를 따라가며 버전별 단어 수와 구조 변화를 비교했다.
-3. 설계 의도는 레포 안의 스펙 문서 `docs/superpowers/specs/2026-10-05-brainstorming-rebuild-design.md`와 `RELEASE-NOTES.md`를 근거로 삼았다.
+3. 성능 비교는 공식 평가 레포 [prime-radiant-inc/superpowers-evals](https://github.com/prime-radiant-inc/superpowers-evals)의 `docs/experiments/` 기록을 읽어 정리했다(직접 실행한 측정이 아님).
+4. 설계 의도는 레포 안의 스펙 문서 `docs/superpowers/specs/2026-10-05-brainstorming-rebuild-design.md`와 `RELEASE-NOTES.md`를 근거로 삼았다.
 
 인용은 원문 영어를 짧게만 사용하고, 나머지는 한국어로 요약했다.
